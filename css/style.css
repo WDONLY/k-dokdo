@@ -1,0 +1,413 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	/* font-family: 'HS봄바람체 2.0'; */
+	font-family: 'Noto San KR';
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+a:link,
+a:hover,
+a:active,
+a:visited {
+	color: #222;
+	text-decoration: none;
+}
+
+.sr-only {
+	position: absolute;
+	left: -9999px;
+}
+body {
+	color: #222;
+	font-size: 16px;
+	background-color: #fff;
+}
+
+#wrap {
+	width: 100%;
+}
+
+header {
+	position: relative;
+	height: 100px;
+	z-index: 1000;
+}
+
+header > .logo {
+	position: fixed;
+	left: 15%;
+	top: 10px;
+	width: 150px;
+	height: 80px;
+	background-image: url(./../images/logo_1.png);
+	background-size: cover;
+	z-index: 400;
+}
+
+header > .logo > a {
+	display: block;
+	height: 100px;
+	text-indent: -9999px;
+}
+
+header > nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	background-color: rgba(3, 0, 17, 0.8);
+}
+header > nav > .gnb {
+	display: flex;
+	justify-content: space-evenly;
+	position: absolute;
+	right: 20%;
+	margin-right: -20px;
+	top: 25px;
+	width: 880px;
+	/* border: 1px solid #000; */
+}
+header > nav > .gnb > li {
+	width: 160px;
+}
+header > nav > .gnb > li > a {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	font-weight: 800;
+	font-size: 18px;
+	text-align: center;
+}
+
+header > nav > .gnb > li > a > span {
+	font-size: 25px;
+}
+
+header > nav > .gnb > li > a > .dok {
+	font-size: 14px;
+}
+header > nav > .gnb > li.on > a,
+header > nav > .gnb > li:hover > a {
+	text-shadow: 3px 1px 3px silver;
+}
+
+section {
+	position: relative;
+	width: 100%;
+	height: 900px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+section > h2 {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	color: #fff;
+	text-decoration: underline;
+	text-shadow: 3px 1px 3px silver;
+	z-index: 400;
+}
+
+.main-slides {
+	overflow: hidden;
+}
+
+.main-slides > .slides-container {
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
+.main-slides > .slides-container > li {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 900px;
+}
+
+.main-slides > .slides-container > li:first-child {
+	display: block;
+}
+
+.main-slides > .slides-container > li > img {
+	display: block;
+	width: 100%;
+}
+
+.main-slides > .slides-container ~ span {
+	display: block;
+	position: absolute;
+	bottom: 220px;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+.main-slides > .slides-container ~ span.play {
+	left: 5%;
+	background-image: url(./../images/play.png);
+
+	z-index: 900;
+}
+.main-slides > .slides-container ~ span.pause {
+	left: 7%;
+	background-image: url(./../images/pause.png);
+}
+
+.main-slides > .pagination {
+	display: flex;
+	justify-content: space-evenly;
+	position: absolute;
+	left: 50%;
+	width: 69px;
+	margin-left: -20px;
+	bottom: 230px;
+}
+.main-slides > .pagination > li {
+	width: 16px;
+}
+
+.main-slides > .pagination > li > a {
+	display: block;
+	height: 16px;
+	text-indent: -9999px;
+	background-image: url(./../images/pager.png);
+}
+
+.main-slides > .pagination > li.on > a,
+.main-slides > .pagination > li:hover > a {
+	height: 16px;
+	background-position: 0 -15px;
+}
+
+.d-story {
+	position: relative;
+	margin-top: -210px;
+
+	/* background-image: url(./../images/dokdo2_1.jpg); */
+}
+
+.d-story > video {
+	display: block;
+	width: 100%;
+}
+.d-story > p {
+	position: absolute;
+	left: 5%;
+	bottom: 15%;
+	width: 700px;
+	height: 200px;
+	padding: 20px;
+	color: #fff;
+	font-size: 20px;
+	box-sizing: border-box;
+	background-color: rgba(69, 108, 147, 0.707);
+	/* outline: 3px solid rgba(237, 236, 241, 0.558); */
+}
+.d-story > p > a {
+	display: inline-block;
+	color: #fff;
+	height: 30px;
+}
+
+.d-story > p > a:hover {
+	text-decoration: underline;
+}
+
+.community {
+	position: relative;
+	margin-top: -45px;
+	background-image: url(./../images/dokdo1_1.jpg);
+}
+.community > h3 {
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	top: 10%;
+	margin-top: -20px;
+	height: 50px;
+	margin-bottom: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 30px;
+
+	font-family: 'Noto Sans KR';
+}
+
+.community > dl {
+	position: absolute;
+	left: 17%;
+	top: 15%;
+	overflow: hidden;
+	width: 1000px;
+	height: 500px;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.737);
+	border: 1px solid #dedede;
+}
+.community > dl > dt {
+	text-indent: 10px;
+	border: 1px solid #dedede;
+}
+.community > dl > dt > a {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	font-weight: 600;
+	font-size: 20px;
+	font-family: 'Noto Sans KR';
+}
+.community > dl > dt > a:hover {
+	text-decoration: underline;
+}
+.community > dl > dd {
+	padding: 20px;
+	font-family: 'Noto Sans KR';
+	background-color: #eee;
+}
+
+.community > dl > dd > strong {
+	font-family: 'Noto Sans KR';
+}
+
+.community > .frame {
+	position: absolute;
+	left: 17%;
+	bottom: 10%;
+	width: 1000px;
+	height: 150px;
+	margin: 10px auto;
+	color: #fff;
+	font-size: 20px;
+}
+
+.community > .frame > img {
+	display: block;
+	float: left;
+	padding-right: 10px;
+	box-sizing: border-box;
+}
+
+.reference {
+	position: relative;
+	margin-top: -40px;
+	background-image: url(./../images/dokdo5_1.jpg);
+}
+
+.reference button {
+	width: 100px;
+	height: 50px;
+	margin: 0 10px;
+	margin-top: 150px;
+	color: #fff;
+	font-size: 16px;
+	background-color: rgba(0, 0, 0, 0.435);
+	border: 2px solid #dedede;
+	cursor: pointer;
+}
+
+.reference > .gallery,
+.reference > .research,
+.reference > .promo,
+.reference > .live {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 450px;
+	height: 300px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.reference > .gallery {
+	left: 50%;
+	margin-left: -500px;
+	top: 15%;
+}
+
+.reference > .research {
+	right: 50%;
+	margin-right: -450px;
+	top: 15%;
+}
+
+.reference > .promo {
+	left: 50%;
+	margin-left: -500px;
+	bottom: 10%;
+}
+
+.reference > .live {
+	right: 50%;
+	margin-right: -450px;
+	bottom: 10%;
+}
+
+.reference > .live > .video-container {
+	width: 300px;
+	height: 200px;
+}
+
+.reference > .live > .video-container > video {
+	display: block;
+	width: 100%;
+}
+
+footer {
+	position: relative;
+}
+
+footer > nav {
+}
+
+footer > .copyright > nav > .fnb {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+footer > .copyright > nav > .fnb > li {
+	width: 200px;
+}
+footer > .copyright > nav > .fnb > li > a {
+	display: block;
+	font-family: 'Noto Sans KR';
+}
+
+footer > .copyright > address {
+	height: 100px;
+	padding: 15px;
+	text-align: center;
+	font-size: 15px;
+	font-style: normal;
+	font-family: 'Noto Sans KR';
+	box-sizing: border-box;
+}
+
+footer > .copyright > address > .fspan {
+	font-family: 'Noto Sans KR';
+	background-color: rgb(226, 233, 233);
+}
+
+footer > p {
+	position: absolute;
+	right: 5%;
+	top: 5%;
+	margin-top: -7px;
+}
+footer > p > select {
+	font-family: 'Noto Sans KR';
+}
+footer > p > select > option {
+	font-family: 'Noto Sans KR';
+}
